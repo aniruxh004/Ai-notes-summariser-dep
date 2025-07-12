@@ -14,8 +14,8 @@ export default function Login() {
     e.preventDefault();
     try {
       await axios.post('/user/login', form, { withCredentials: true });
-      // await new Promise(resolve => setTimeout(resolve, 300));
-      const res = await axios.get('/user/verify', { withCredentials: true }); //was get req earlier changed to post after deployment
+      await new Promise(resolve => setTimeout(resolve, 300));
+      const res = await axios.get('/user/verify', { withCredentials: true }); 
       setUser(res.data.user);
       navigate('/home', { replace: true });
     } catch (err) {

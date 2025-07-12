@@ -8,7 +8,7 @@ const cors=require("cors")
 const app=express()
 const PORT=process.env.PORT ||4000
 
-connectDb('mongodb://127.0.0.1:27017/ai-notes-summariser').then(()=>console.log("DB connected"))
+connectDb(process.env.MONGO_DB_URI).then(()=>console.log("DB connected"))
 
 // app.set('view engine','ejs')
 // app.set("views",path.resolve("./views"))

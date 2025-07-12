@@ -42,8 +42,8 @@ const verifyUser = (req, res) => {
 const logout=(req,res)=>{
  res.clearCookie('token',{
     httpOnly:true,
-    sameSite:'Lax',
-    secure:false
+    sameSite:'None',
+    secure:true
  })
  res.json({message:'logout successfull'})
 }

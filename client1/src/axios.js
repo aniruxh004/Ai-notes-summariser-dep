@@ -8,7 +8,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:8000',
+  baseURL: 'https://ai-notes-summariser-dep.onrender.com',
   withCredentials: true // ✅ Sends cookie with every request
 });
 

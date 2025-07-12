@@ -16,7 +16,7 @@ connectDb('mongodb://127.0.0.1:27017/ai-notes-summariser').then(()=>console.log(
 
 
 app.use(cors({
-  origin: 'http://localhost:5174',   
+  origin: 'https://ai-notes-summariser-dep-client.onrender.com',   
   methods: ['GET', 'POST', 'OPTIONS'],
   credentials: true,                 
   allowedHeaders: ['Content-Type'],

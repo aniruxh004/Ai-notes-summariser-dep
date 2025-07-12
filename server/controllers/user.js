@@ -21,8 +21,8 @@ const login = async (req, res) => {
         const token = await User.matchPasswordandGenerateToken(email, password)
         res.cookie("token", token, {
             httpOnly: true,
-            secure:false,
-            sameSite:'Lax'       
+            secure:true,
+            sameSite:'None'       
                 });
         return res.status(200).json({ message: 'login succcess' })
     } catch (error) {

@@ -3,7 +3,7 @@ const {signup,login, verifyUser,logout}=require("../controllers/user");
 const { checkAuthCookie } = require("../middleware/authorization");
 const router=express.Router()
 
-router.get('/verify', checkAuthCookie("token"), verifyUser);
+router.post('/verify', checkAuthCookie("token"), verifyUser); //was get ealier 
 
 router.post("/signup",signup) 
 

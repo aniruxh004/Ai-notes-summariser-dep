@@ -3,7 +3,7 @@ const express = require('express');
 const multer = require('multer');
 const pdfParse = require('pdf-parse');
 const mammoth = require('mammoth');
-const { summarizeText } = require('../controllers/notescontroller');
+const { summarizeText } = require('../controllers/notesController');
 
 const router = express.Router();
 const upload = multer({ storage: multer.memoryStorage() });

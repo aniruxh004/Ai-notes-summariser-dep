@@ -10,7 +10,7 @@ async function summarizeText(input) {
 
   try {
     const response = await axios.post(
-      "https://api-inference.huggingface.co/models/pszemraj/led-large-book-summary",
+       "https://router.huggingface.co/hf-inference/models/pszemraj/led-large-book-summary",
       { inputs: text },
       {
         headers: {
